@@ -1,17 +1,126 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+.birthday-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px; /* Increase the size for a more pronounced effect */
+    color: #f7885c;  /* Pink color */
+
+    letter-spacing: 4px; /* Spacing between letters for more impact */
+    padding: 15px;
+    border-radius: 20px;
+    background: radial-gradient(circle, #949fff 1%, #4169E1   50%);
+}
+
+/* Blurry Background */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Inherit the background image */
+    filter: blur(10px); /* Adjust the blur level */
+    z-index: -1;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 50px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #000;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #ffffff 5%, #2c4797 100%);
+    background-blend-mode:color-burn
+    text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
+h1 {
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+.image-container {
+    background-color: #c9c6c6;
+    border: 1px solid #000; /* Border around the container */
+    padding: 0px; /* Space between the border and the image */
+    display: inline-block; /* Adjust based on your layout */
+    overflow: hidden; /* Ensures the image does not overflow the container */
+    width: 1000px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    align-self: center;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh;
+    box-shadow: 1000px 1000px 50px rgba(0, 0, 0, 0.2); /* Shadow around the image container */
+    border-radius: 20px;
+    
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the image fits within the container */
+    max-height: 100%; /* Ensures the image fits within the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh;
+}
+
+/* Button container styling */
+.button-container {
+    display: flex;
+    justify-content: center; /* Center button horizontally */
+    margin-top: 10px; /* Space above the button */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.button {
+    font-family: 'Idolwild', cursive; /* Use a fun font */
+    font-size: 18px; /* Adjust size as needed */
+    color: #FFFFFF; /* Text color */
+    background: linear-gradient(135deg, #2f5fe4, #9e93ff); /* Gradient background */
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 15px 30px; /* Padding inside the button */
+    text-align: center; /* Center text */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Button hover effect */
+.button:hover {
+    background: linear-gradient(135deg, #9e93ff, #2f5fe4); /* Reverse gradient */
+    transform: scale(1.05); /* Slightly increase size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Button active state effect */
+.button:active {
+    transform: scale(0.98); /* Slightly decrease size on click */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
 }

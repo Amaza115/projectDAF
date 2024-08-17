@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Raccoon Pictures</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Random Raccoon Picture</h1>
-    <img src="{{ image_url }}" alt="Random Raccoon">
     <br>
-    <button onclick="window.location.reload();">Show Another Raccoon</button>
+    <div class="birthday-text">
+       
+    </div>
+    <br>
+
+    <div class="image-container">
+        <img src="{{ image_url }}" alt="Random Raccoon">
+    </div>
+
+    <br>
+    <div class = "button-container">
+        <button class = "button" onclick="window.location.reload();">Show Another Raccoon</button>
+    </div>
+        <br>
 </body>
 </html>

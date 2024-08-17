@@ -1,18 +1,23 @@
 import flask 
 import random
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, url_for, current_app
+import os
 
 main = Blueprint('main', __name__)
 
-# List of raccoon images
-raccoon_images = [
-    "https://example.com/raccoon1.jpg",
-    "https://example.com/raccoon2.jpg",
-    "https://example.com/raccoon3.jpg",
-    "https://example.com/raccoon4.jpg"
-]
 
 @main.route('/')
 def home():
-    image_url = random.choice(raccoon_images)
+    # Path to the images folder using current_app in a Blueprint
+    images_folder = os.path.join(current_app.static_folder, 'images')
+    
+    # List all images in the directory
+    images = os.listdir(images_folder)
+    
+    # Select a random image
+    random_image = random.choice(images)
+    
+    # Build the URL for the selected image
+    image_url = url_for('static', filename=f'images/{random_image}')
+    
     return render_template('index.html', image_url=image_url)
