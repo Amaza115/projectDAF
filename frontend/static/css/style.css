@@ -50,7 +50,6 @@ body {
     margin: 0;
     background: radial-gradient(circle, #ffffff 5%, #2c4797 100%);
     background-blend-mode:color-burn
-    text-align: center;
 }
 
 h1 {
